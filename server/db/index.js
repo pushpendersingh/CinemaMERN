@@ -30,12 +30,6 @@ mongoose
         console.error('Connection error', e.message)
     })
 
-const db = mongoose.connection
-
-db.on('error', console.error.bind(console, 'Mongodb Connection Error:' + dbConnectionURL.LOCALURL));
-db.once('open', () => {
-     // we're connected !
-     console.log('Mongodb Connection Successful');
-});
+const db = mongoose.connection;
 
 module.exports = db
